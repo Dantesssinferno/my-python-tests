@@ -4,9 +4,8 @@ str_2 = input()
 result = str_1 + str_2
 print(result.strip(str_2))
 
-
 # Напишите код, который принимает два значения (каждое с новой строки) - первое значение выводит в верхнем регистре, второе в нижнем регистре, а после складывает с пробелом между ними
 str_1 = input().upper()
 str_2 = input().lower()
-result = f"{str_1} {str_2}"
-print(result)
+result_1 = f"{str_1} {str_2}"
+print(result_1)
