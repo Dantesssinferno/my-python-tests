@@ -1,25 +1,22 @@
 # Напишите код, который на входе принимает строку со списком названий фильмов, записанных в одну строчку через пробел.
 # Выведите на печать последний элемент списка.
-# films = input().split()
-# last_film = films[-1]
-# print(last_film)
-from Lessons.Spisok_old import new_list
+films = input().split()
+last_film = films[-1]
+print(last_film)
+
 
 # Напишите код, который на входе принимает строку со списком названий фильмов, записанных в одну строчку через пробел.
 # Затем складывает элементы с первым и третьим индексом списка, без пробела, и выводит данное значение
-# films = input().split()
-# if len(films) > 2:
-#     new_film = films[1] + films[3]
-#     print(new_film)
-# else:
-#     print(" ")
+films = input().split()
+if len(films) > 2:
+    new_film = films[1] + films[3]
+    print(new_film)
+else:
+    print(" ")
 
 # Напишите код, который на входе принимает строку со списком названий фильмов, записанных в одну строчку через пробел.
 # Затем удалите предпоследний элемент списка и выведете список на печать (через команду print(films)).
 films = input().split()
-if "Схватка" in films:
-    new_list = films.remove("Схватка")
-    print(new_list)
-elif "Дуэлянты " in films:
-    new_list_2 = films.remove("Дуэлянты")
-    print(new_list_2)
+if len(films) >= 2:
+    del films[-2]
+print(films)
