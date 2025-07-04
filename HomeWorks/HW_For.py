@@ -124,26 +124,47 @@ from array import array
 # Ответ должен быть в виде суммы, к примеру a - 4 раза, b - 2 раза, i - 0 раз - сумма равна 6.
 # Используйте для ввода строчку a = input()
 
-a = input()
-
-counter_a = 0
-counter_b = 0
-counter_i = 0
-
-for char in a:
-    if char == "a":
-        counter_a += 1
-    if char == "b":
-        counter_b += 1
-    if char == "i":
-        counter_i += 1
-
-print(counter_a + counter_b + counter_i)
+# a = input()
+#
+# counter_a = 0
+# counter_b = 0
+# counter_i = 0
+#
+# for char in a:
+#     if char == "a":
+#         counter_a += 1
+#     if char == "b":
+#         counter_b += 1
+#     if char == "i":
+#         counter_i += 1
+#
+# print(counter_a + counter_b + counter_i)
 
 # Напишите код, который создает пустой список и записывает в него числа, от 1 до 10 включительно.
 # Далее с помощью цикла for выведите первые 5 элементов списка на печать
 
-list(a)
+# numbers =[]
+#
+# for i in range(1, 11):
+#     numbers.append(i)
+#
+#
+# for i in range(5):
+#     print(numbers[i])
 
-for n
-    num += 1
+# Напишите код, который на входе принимает два списка с числами, записанных в одну строчку через пробел.
+# Считает сумму элементов каждого списка и выводит на печать номер того, в котором сумма больше
+# Например если в перовом списке сумма всех элементов 20, а во втором 30, то выводим цифру 2
+# Используйте данную строчку для ввода данных, формирующих список:
+# numbers = list(map(int, input().split()))
+
+numbers = list(map(int, input().split()))
+numbers_2 = list(map(int, input().split()))
+
+sum_elements = sum(numbers)
+sum_elements_2 = sum(numbers_2)
+
+if sum_elements > sum_elements_2:
+    print(1)
+else:
+    print(2)
