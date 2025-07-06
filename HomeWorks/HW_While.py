@@ -2,13 +2,13 @@
 # Примените цикл while, который выведет на печать все элементы из списка больше 7.
 # Каждое значение необходимо выводить с новой строки.
 # Используйте данную строчку для ввода данных, формирующих список:
-numbers = list(map(int, input().split()))
-index = 0
-
-while index < len(numbers):
-    if numbers[index] > 7:
-        print(numbers[index])
-    index +=1
+# numbers = list(map(int, input().split()))
+# index = 0
+#
+# while index < len(numbers):
+#     if numbers[index] > 7:
+#         print(numbers[index])
+#     index +=1
 
 # Напишите код, который на входе принимает список с числами, через пробел.
 # Примените цикл while, который будет работать пока элемент будет четным.
@@ -16,15 +16,15 @@ while index < len(numbers):
 # Используйте данную строчку для ввода данных, формирующих список:
 # numbers = list(map(int, input().split()))
 
-numbers = list(map(int, input().split()))
-
-index = 0
-while index < len(numbers):
-    if numbers[index] % 2 == 0:
-        print(numbers[index])
-    else:
-        break
-    index += 1
+# numbers = list(map(int, input().split()))
+#
+# index = 0
+# while index < len(numbers):
+#     if numbers[index] % 2 == 0:
+#         print(numbers[index])
+#     else:
+#         break
+#     index += 1
 
 # Напишите код, который на входе принимает список с числами, через пробел.
 # Примените цикл while, который выведет на печать все нечетные числа в квадрате.
@@ -32,13 +32,13 @@ while index < len(numbers):
 # Используйте данную строчку для ввода данных, формирующих список:
 # numbers = list(map(int, input().split()))
 
-numbers = list(map(int, input().split()))
-
-index = 0
-while index < len(numbers):
-    if numbers[index] % 2 != 0:
-        print(numbers[index] ** 2)
-    index += 1
+# numbers = list(map(int, input().split()))
+#
+# index = 0
+# while index < len(numbers):
+#     if numbers[index] % 2 != 0:
+#         print(numbers[index] ** 2)
+#     index += 1
 
 # Напишите код, который на входе принимает список с элементами в виде строк (текст), через пробел.
 # Примените цикл while, который будет работать пока элемент списка будет содержать только буквы.
@@ -46,12 +46,50 @@ while index < len(numbers):
 # Используйте данную строчку для ввода данных, формирующих список:
 # films = input().split()
 
-films = input().split()
+# films = input().split()
+#
+# index = 0
+# while index < len(films):
+#     if films[index].isalpha():
+#         print(films[index])
+#     else:
+#         break
+#     index += 1
 
+# Напишите код, который принимает на вход число.
+# С помощью цикла while выведите все числа, на которые можно поделить данное число так, чтобы результат был целым числом, по возрастанию.
+# Например:
+# 10
+# Результат:
+# 1, 2, 5, 10
+# Используйте для ввода строчку a = int(input())
+
+# a = int(input())
+# index = 1
+#
+# while index <= a:
+#     if a % index == 0:
+#         print(index)
+#     index += 1
+
+
+# Напишите код, который принимает на вход два числа. Количество литров бензина в баке и минимальное количество бензина которое должно остаться в баке.
+# Каждый день расход топлива 10% от первоначального количества.
+# С помощью цикла while определите на какой день объем бака будет равен минимальному количеству бензина которое должно остаться в баке.
+# Например:
+# 100
+# 45
+# Результат:
+# 6
+# Например объем 100 л, нужно определить на какой день он будет 45 литров. Мы получаем что на 6 день, так как в первые 5 дней списалось 50 (50% бака), остальные на 6-й (но менее 10%)
+# Используйте для ввода строчку a = int(input())
+a = int(input()) # максимальный объем топлива
+b = int(input()) # минимальный объем топлива
 index = 0
-while index < len(films):
-    if films[index].isalpha():
-        print(films[index])
-    else:
-        break
+current = a
+
+while current > b:
+    current -= a * 0.1
     index += 1
+print(index)
+
