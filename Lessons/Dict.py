@@ -199,9 +199,9 @@ d = {
     "weight": 84,
     "height": 179
 }
-# print(d.get("name"))
-# print(d["name"])
-# print(d["age"])
-# print(d["weight"])
-# print(d["height"])
+print(d.get("name"))
+print(d["name"])
+print(d["age"])
+print(d["weight"])
+print(d["height"])
 print(d.items())
