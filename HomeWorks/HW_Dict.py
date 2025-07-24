@@ -2,6 +2,7 @@
 # Каждое значение необходимо выводить с новой строки.
 # new_dict = {'file1.txt': 10, 'file2.txt': 100, 'file3.txt': 101, 'file4.txt': 200, 'file5.txt': 5, 'file6.txt': 305}
 
+
 new_dict = {
     'file1.txt': 10,
     'file2.txt': 100,
@@ -84,3 +85,68 @@ numbers_2 = set(map(int, input().split()))
 intersection_num = numbers_1.intersection(numbers_2)
 for num in sorted(intersection_num):
     print(num)
+
+# Напишите код, который на входе принимает два множества с числами, через пробел.
+# Объедините и выведите их на печать, в порядке возрастания.
+# Каждое значение необходимо выводить с новой строки.
+# Используйте данную строчку для ввода данных, формирующих множество:
+# numbers_1 = set(map(int, input().split()))
+# numbers_2 = set(map(int, input().split()))
+
+num_1 = set(map(int, input().split()))
+num_2 = set(map(int, input().split()))
+
+unique_sorted_union = (num_1 | num_2)
+for num in unique_sorted_union:
+    print(num)
+
+# Напишите код, который на входе принимает два множества с числами, через пробел.
+# Проведите сверку двух множеств, если они имеют общие элементы, то выведите на печать Good, если нет, то Bad.
+# Используйте данную строчку для ввода данных, формирующих множество:
+# numbers_1 = set(map(int, input().split()))
+# numbers_2 = set(map(int, input().split()))
+
+numbers_1 = set(map(int, input().split()))
+numbers_2 = set(map(int, input().split()))
+
+common = numbers_1 & numbers_2
+
+if common:
+    print("Good")
+else:
+    print("Bad")
+
+# Напишите код, который на входе принимает три множества с числами, через пробел.
+# Проведите проверку данных множеств, в случае наличия элемента, который есть во всех трех множествах, то вывести на печать Good, если нет, то Bad.
+# Используйте данную строчку для ввода данных, формирующих множество:
+# numbers_1 = set(map(int, input().split()))
+# numbers_2 = set(map(int, input().split()))
+# numbers_3 = set(map(int, input().split()))
+
+numbers_1 = set(map(int, input().split()))
+numbers_2 = set(map(int, input().split()))
+numbers_3 = set(map(int, input().split()))
+
+common = numbers_1 & numbers_2 & numbers_3
+
+if common:
+    print("Good")
+else:
+    print("Bad")
+
+# Напишите код, который на входе принимает три множества с числами, через пробел.
+# Выводите на печать элемент, который присутствует в первых двух, но отсутствует в третьем.
+# Используйте данную строчку для ввода данных, формирующих множество
+# numbers_1 = set(map(int, input().split()))
+# numbers_2 = set(map(int, input().split()))
+# numbers_3 = set(map(int, input().split()))
+
+numbers_1 = set(map(int, input().split()))
+numbers_2 = set(map(int, input().split()))
+numbers_3 = set(map(int, input().split()))
+
+common_1_2 = numbers_1 & numbers_2
+result = common_1_2 - numbers_3
+
+for num in result:
+        print(num)

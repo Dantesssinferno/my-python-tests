@@ -1,170 +1,75 @@
-# Напишите код, который выводит квадраты чисел от 1 до 10. Каждое значение необходимо выводить с новой строки.
-# Задание без использования функции input(), только сам код вычисления.
-from array import array
+def task_1_squares():
+    for num in range(1, 11):
+        print(num ** 2)
 
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+def task_2_sum_of_list(numbers):
+    print(sum(numbers))
 
-for num in numbers:
-    square = num**2
-    print(square)
+def task_3_even_numbers(numbers):
+    for num in numbers:
+        if num % 2 == 0:
+            print(num)
 
-# Напишите код, который на входе принимает списoк из нескольких чисел, записанных в одну строчку через пробел.
-# Вычислите и выведите на печать сумму всех элементов списка.
+def task_4_sum_of_even(numbers):
+    print(sum(num for num in numbers if num % 2 == 0))
 
-# Напишите код, который на входе принимает списoк из нескольких чисел, записанных в одну строчку через пробел. Вычислите и выведите на печать сумму всех элементов списка.
-# Используйте данную строчку для ввода данных, формирующих список:
-numbers = list(map(int, input().split()))
+def task_5_print_films_with_index(films):
+    for i, film in enumerate(films):
+        print(f"Индекс {i}: {film}")
 
-numbers = list(map(int, input().split()))
+def task_6_total_letters_in_films(films):
+    print(sum(len(film) for film in films))
 
-summ_numbers = 0
+def task_7_multiplication_table():
+    for num in range(1, 11):
+        print(num * 7)
 
-for f in numbers:
-    summ_numbers += f
-print(summ_numbers)
-
-# Напишите код, который на входе принимает список из нескольких чисел, записанных в одну строчку через пробел. В таблице будет представлен диапазон, для краткости, например от 1 до 20 включительно, но фактически это 1, 2, 3, 4, ....20. Выводите на печать все четные числа. Каждое значение необходимо выводить с новой строки.
-# Используйте данную строчку для ввода данных, формирующих список:
-numbers = list(map(int, input().split()))
-
-numbers = list(map(int, input().split()))
-
-for num in numbers:
-    if num % 2 == 0:
-        print(num)
-
-# Напишите код, который на входе принимает список из нескольких чисел, записанных в одну строчку через пробел. В таблице будет представлен диапазон, для краткости, например от 1 до 20 включительно, но фактически это 1, 2, 3, 4, ....20. Выводите на печать сумму всех четных чисел.
-# Используйте данную строчку для ввода данных, формирующих список:
-numbers = list(map(int, input().split()))
-
-numbers = list(map(int, input().split()))
-summ = 0
-
-for num in numbers:
-    if num % 2 == 0:
-        summ += num
-print(summ)
-
-# Напишите код, который на входе принимает список с названием фильмов, записанных в одну строчку через пробел. Выводите на печать каждый элемент списка с его индексом.
-# Каждое значение необходимо выводить с новой строки.
-# Используйте данную строчку для ввода данных, формирующих список:
-films = input().split()
-
-films = input().split()
-
-for i, film in enumerate(films):
-    print(f"Индекс {i}: {film}")
-
-# Напишите код, который на входе принимает список с названием фильмов, записанных в одну строчку через пробел. Выводите на печать сумму количества букв в каждом элементе ( количество букв в первом фильме + количество букв во втором фильме + ......)
-# Используйте данную строчку для ввода данных, формирующих список:
-films = input().split()
-
-films = input().split()
-
-sum_elements = 0
-for element in films:
-    sum_elements += len(element)
-print(sum_elements)
-
-# Напишите код, который выводит результат умножения на 7, числа от 1 до 10. Каждое значение необходимо выводить с новой строки.
-# Задание без использования функции input(), только сам коды вычисления.
-
-num_3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-for num in num_3:
-    multiplication = num * 7
-    print(multiplication)
-
-# Напишите код, который на входе принимает список с числами, записанных в одну строчку через пробел.
-# Код должен выводить элементы списка с четными индексами.
-# Каждое значение необходимо выводить с новой строки.
-# Используйте данную строчку для ввода данных, формирующих список:
-numbers = list(map(int, input().split()))
-
-numbers = list(map(int, input().split()))
-
-for i in range(len(numbers)):
-    if i % 2 == 0:
+def task_8_even_index_elements(numbers):
+    for i in range(0, len(numbers), 2):
         print(numbers[i])
 
-# Напишите код, который на входе принимает список с числами, записанных в одну строчку через пробел.
-# Код должен вывести на печать среднее арифметическое число по списку.
-# Используйте данную строчку для ввода данных, формирующих список:
-numbers = list(map(int, input().split()))
+def task_9_average(numbers):
+    if numbers:
+        print(sum(numbers) / len(numbers))
+    else:
+        print(0)
 
-numbers = list(map(int, input().split()))
+def task_10_print_only_letters(a):
+    for element in a:
+        if element.isalpha():
+            print(element)
 
-average = sum(numbers) / len(numbers)
-print(average)
+def task_11_count_letter_occurrences(a, b):
+    print(a.count(b))
 
-# Напишите код, который принимает одно значения в виде строки, затем, с помощью цикла for, выводит на печать только буквы.
-# Каждую букву необходимо выводить с новой строки.
-# Используйте для ввода строчку a = input()
-a = input()
+def task_12_count_specific_letters(a):
+    count = a.count('a') + a.count('b') + a.count('i')
+    print(count)
 
-for element in a:
-    if element.isalpha():
-        print(element)
+def task_13_first_five_of_list():
+    numbers = list(range(1, 11))
+    for i in range(5):
+        print(numbers[i])
 
-# Напишите код, который принимает два значения в виде строки:
-# первое - строка содержащая набор букв и цифр
-# второе - буква по которой будет осуществляться поиск
-# с помощью цикла for, посчитает количество раз, которое встречается данная буква в исходной строке.
-# Используйте для ввода строчки a = input() и b = input()
-a = input()
-b = input()
-counter = 0
+def task_14_compare_two_lists(numbers1, numbers2):
+    sum1 = sum(numbers1)
+    sum2 = sum(numbers2)
+    print(1 if sum1 > sum2 else 2)
 
-for char in a:
-    if char == b:
-        counter += 1
-print(counter)
-
-# Напишите код, который принимает одно значениe в виде строки, с помощью цикла for, посчитает количество раз, которое встречаются в данной строке буквы - a, b, i.
-# Ответ должен быть в виде суммы, к примеру a - 4 раза, b - 2 раза, i - 0 раз - сумма равна 6.
-# Используйте для ввода строчку a = input()
-
-a = input()
-
-counter_a = 0
-counter_b = 0
-counter_i = 0
-
-for char in a:
-    if char == "a":
-        counter_a += 1
-    if char == "b":
-        counter_b += 1
-    if char == "i":
-        counter_i += 1
-
-print(counter_a + counter_b + counter_i)
-
-# Напишите код, который создает пустой список и записывает в него числа, от 1 до 10 включительно.
-# Далее с помощью цикла for выведите первые 5 элементов списка на печать
-
-numbers =[]
-
-for i in range(1, 11):
-    numbers.append(i)
-
-
-for i in range(5):
-    print(numbers[i])
-
-# Напишите код, который на входе принимает два списка с числами, записанных в одну строчку через пробел.
-# Считает сумму элементов каждого списка и выводит на печать номер того, в котором сумма больше
-# Например если в перовом списке сумма всех элементов 20, а во втором 30, то выводим цифру 2
-# Используйте данную строчку для ввода данных, формирующих список:
-# numbers = list(map(int, input().split()))
-
-numbers = list(map(int, input().split()))
-numbers_2 = list(map(int, input().split()))
-
-sum_elements = sum(numbers)
-sum_elements_2 = sum(numbers_2)
-
-if sum_elements > sum_elements_2:
-    print(1)
-else:
-    print(2)
+# Пример запуска (можно раскомментировать нужное):
+if __name__ == "__main__":
+    # task_1_squares()
+    # task_2_sum_of_list(list(map(int, input().split())))
+    # task_3_even_numbers(list(map(int, input().split())))
+    # task_4_sum_of_even(list(map(int, input().split())))
+    # task_5_print_films_with_index(input().split())
+    # task_6_total_letters_in_films(input().split())
+    # task_7_multiplication_table()
+    # task_8_even_index_elements(list(map(int, input().split())))
+    # task_9_average(list(map(int, input().split())))
+    # task_10_print_only_letters(input())
+    # task_11_count_letter_occurrences(input(), input())
+    # task_12_count_specific_letters(input())
+    # task_13_first_five_of_list()
+    # task_14_compare_two_lists(list(map(int, input().split())), list(map(int, input().split())))
+    pass
