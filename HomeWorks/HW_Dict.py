@@ -150,3 +150,4 @@ result = common_1_2 - numbers_3
 
 for num in result:
         print(num)
+
