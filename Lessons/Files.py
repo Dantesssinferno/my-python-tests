@@ -90,7 +90,7 @@ file.close()
 # Где:
 # file - файл, который нужно закрыть.
 # Рассмотрим пример:
-file = open('test.txt', 'r')
+file = open('Doc/test.txt', 'r')
 content = file.read()
 print(content)
 file.close()
