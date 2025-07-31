@@ -1,0 +1,3 @@
+name: Max
+age: 30
+city: Ribnitca
