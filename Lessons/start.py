@@ -77,3 +77,12 @@
 # New > Python Package
 # Дадим ему имя mod. Теперь давайте перенесем в него наш модуль math_functions.py
 # Это должно выглядеть следующим образом:
+
+# # from Lessons import Hello
+import math
+#from mod import math
+# from mod import math
+# print(math.pi)
+from mod import some
+some.sub(8, 6)
+some.sum(9, 7)
