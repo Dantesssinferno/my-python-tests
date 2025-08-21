@@ -78,8 +78,73 @@
 # Напишите функцию new_function(), которая принимает одно значение в виде строки. Это Фамилия Имя Отчество.
 # Создайте код который выведет на печать только имя пользователя.
 
-def new_function():
-    user_input = input().strip() # убираю лишние элементы
-    parts_of_user_input = user_input.split() # создаем список
-    print(parts_of_user_input[1])           # выводим второй элемент на печать
-new_function()
+# def new_function():
+#     user_input = input().strip() # убираю лишние элементы
+#     parts_of_user_input = user_input.split() # создаем список
+#     print(parts_of_user_input[1])           # выводим второй элемент на печать
+# new_function()
+
+# Напишите функцию new_function(), которая принимает одно значение в виде строки. Это Фамилия Имя Отчество.
+# Создайте код который выведет на печать фамилию и инициалы.
+# Например:
+# Иванов Иван Иванович
+# После обработки:
+# Иванов И.И.
+
+# def new_function():
+#     user_input = input().strip() # пользовательский ввод, удаляем пробелы и лишние символы
+#     parts = user_input.replace('\t', ' ').split() # создаю новый список строк
+#
+#     if not parts:
+#         print("")
+#         return
+#     surname = parts[0]
+#
+#     if len(parts) == 1:
+#         print(surname)
+#         return
+#
+#     name_initial = parts[1][0].upper() + "."
+#     patronymic_initial = parts[2][0].upper() + "." if len(parts) >= 3 and parts[2] else ""
+#
+#     print(f"{surname} {name_initial}{patronymic_initial}")
+# new_function()
+
+# Напишите функцию new_function(), которая принимает два значения: строку - это Имя и число - это год рождения.
+# Текущий год по дефолту 2024
+# Создайте код который выведет на печать "Меня зовут <Имя>, мне <возраст>."
+# Например:
+# Иван
+# 1990
+# После обработки:
+# Меня зовут Иван, мне 34.
+
+# def new_function():
+#     user_name = input()
+#     user_birth_date = int(input())
+#     year_now = 2024
+#     user_age = year_now - user_birth_date
+#     print(f'Меня зовут {user_name}, мне {user_age}.')
+# new_function()
+
+# Напишите 3 функции: logic(), russia(), england().
+# Примите два значения в виде строк: первое - Имя, второе - Страна проживания.
+# Функция logic() должна их отработать, если страна = Россия, то отрабатывает функция russia() и выводит на печать "Здравствуй <Имя>", если страна = England, то отрабатывает функция england() и выводит на печать "Hello <Имя>".
+
+def logic():
+    user_name = input()
+    user_country = input()
+    if user_country == "Россия":
+        russia(user_name, user_country)
+    elif user_country == "England":
+        england(user_name, user_country)
+    else:
+        england(user_name, user_country)
+
+def russia(user_name, user_country):
+    print(f"Здравствуй {user_name}")
+
+def england(user_name, user_country):
+    print(f"Hello {user_name}")
+
+logic()
