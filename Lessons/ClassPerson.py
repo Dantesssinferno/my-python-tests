@@ -71,36 +71,42 @@ russian = Alphabet("Русский", "RU", "абвгдеёжзийклмнопр
 # Результат: Русский
 
 
-class Person():
-    """Модель человека""" # описание класса
+class Animal():
+    """Создаем животное"""
 
-    def __init__(self, name:str, age:int): # __init__ инициализация класса в конструкторе указываем параметры класса
-        """Инициализация атрибутов человека - имя, возраст"""
-        self.name = name # self - это ссылка на экземпляр класса (обязательно в начале добавляем self)
+    def __init__(self, name, age, height):
+        """Инициализируем атрибуты животного"""
+        self.name = name
         self.age = age
-        print("Человек создан")
+        self.height = height
+        self.weight = 100
 
-    def sing(self): # методы класса, то что способен делать экземпляр класса
-        """Просим человека спеть"""
-        print(self.name + " поет")
+    def description_person(self):
+        """Получение описания животного"""
+        description = (self.name
+                       + ", ему: " + str(self.age)
+                       + " лет, " + "рост: " + str(self.height)
+                       + " см" + ", вес: " + str(self.weight) + " кг")
+        print("Нового питомца зовут: " + description)
 
-    def dance(self):
-        """Просим человека станцевать"""
-        print(self.name + " танцует")
+    def get_weight(self):
+        """Получение веса питомца"""
+        print("Вес питомца: " + str(self.weight) + " кг")
 
-    def walk(self):
-        """Просим человека погулять"""
-        print(self.name + " гуляет")
+    def update_weight(self, kg):
+        """Изменение веса человека"""
+        self.weight = self.weight + kg
+        print("Вес изменился на: " + str(kg) + " кг")
+        print("Текущий вес: " + str(self.weight) + " кг")
 
-man = Person("Max", 33) # Экземпляр класса
-# print(man.name)
-# print(man.age)
-woman = Person("Nasty", 28)
 
-man.dance() # обрашаемся к методу класса, чтобы заставить экземпляр что-либо сделать
-man.walk()
-woman.dance()
-woman.sing()
-woman.walk()
+
+dog = Animal("Max", 10, 52)
+
+dog.get_weight()
+dog.update_weight(10)   # поправился на 10 кг
+dog.update_weight(-5)   # похудел на 5 кг
+dog.get_weight()
+
 
 

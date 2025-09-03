@@ -1,38 +1,79 @@
-class Animal():
-    """Создаем животное"""
-
-    def __init__(self, name, age, height):
-        """Инициализируем атрибуты животного"""
-        self.name = name
-        self.age = age
-        self.height = height
-        self.weight = 100
-
-    def description_person(self):
-        """Получение описания животного"""
-        description = (self.name
-                       + ", ему: " + str(self.age)
-                       + " лет, " + "рост: " + str(self.height)
-                       + " см" + ", вес: " + str(self.weight) + " кг")
-        print("Нового питомца зовут: " + description)
-
-    def get_weight(self):
-        """Получение веса питомца"""
-        print("Вес питомца: " + str(self.weight) + " кг")
-
-    def update_weight(self, kg):
-        """Изменение веса человека"""
-        self.weight = self.weight + kg
-        print("Вес изменился на: " + str(kg) + " кг")
-        print("Текущий вес: " + str(self.weight) + " кг")
+# Привет Друзья, в данной лекции Мы рассмотрим создание методов в Python.
+# Недостаточно просто создать класс, он должен работать и выполнять какую-то функцию,
+# именно для этого в нем создаются методы.
+# Давайте создадим метод, который будет возвращать описание алфавита
+from zoneinfo import reset_tzpath
 
 
+class Alphabet:
+    """Класс по созданию и работе с алфавитом"""
+    def __init__ (self, title:str, abbreviation:str, list_letters:str): # в конструкторе перечисляем параметры класса
+        """Атрибуты класса"""
+        self.title = title                  # атрибут класса
+        self.abbreviation = abbreviation    # атрибут класса
+        self.list_letters = list_letters    # атрибут класса
+        print("Новый алфавит создан")
 
-dog = Animal("Max", 10, 52)
+    def description(self):
+        """Получение описания алфавита"""
+        description = (f"Название данного алфавита: {self.title}, его аббревиатура: {self.abbreviation}, " f"Список букв - {self.list_letters}")
 
-dog.get_weight()
-dog.update_weight(10)   # поправился на 10 кг
-dog.update_weight(-5)   # похудел на 5 кг
-dog.get_weight()
+        print(description)
+
+    def description2(self):
+        """Получение описания алфавита"""
+        description2 = (f"Название данного алфавита - {self.title}, его аббревиатура - {self.abbreviation},"
+                       f" список букв - {self.list_letters}")
+        return description2
+
+    def count_letters(self):
+        """Получение количества букв в алфавите"""
+        count = (len(self.list_letters))
+        print(f"Количество букв в алфавите равно: {count}")
+
+    def count_letters2(self):
+        """Получение количества букв в алфавите"""
+        count = (len(self.list_letters))
+        return count
+
+russian = Alphabet("Русский","RU", "абвгдеёжзийклмнопрстуфхцчшщъыьэюя") # экземпляр класса
+russian.description() # Вызов методаэкземпляр класса
+
+# Результат:
+# Новый алфавит создан
+# Название данного алфавита - Русский, его аббревиатура - RU, список букв - абвгдеёжзийклмнопрстуфхцчшщъыьэюя
+
+# В данном примере, Мы просто выводим на печать значение переменной description,
+# но так же можем возвращать ее через return, если Нам необходимо в дальнейшем с ней работать.
+
+
+russian = Alphabet("Русский", "RU", "абвгдеёжзийклмнопрстуфхцчшщъыьэюя")
+print(russian.description2())
+
+# Результат:
+# Новый алфавит создан
+# Название данного алфавита - Русский, его аббревиатура - RU, список букв - абвгдеёжзийклмнопрстуфхцчшщъыьэю
+
+# Создадим еще один метод, который будет возвращать количество букв в алфавите,
+# то есть будет пробегать по значению атрибута list_letters и считать количество символов,
+# содержащееся в строке:
+
+russian = Alphabet("Русский", "RU", "абвгдеёжзийклмнопрстуфхцчшщъыьэюя")
+russian.count_letters()
+# Результат:
+# Новый алфавит создан
+# Количество букв в алфавите равно: 33
+
+russian = Alphabet("Русский", "RU", "абвгдеёжзийклмнопрстуфхцчшщъыьэюя")
+print(russian.count_letters2())
+
+
+
+
+
+
+
+
+
 
 
