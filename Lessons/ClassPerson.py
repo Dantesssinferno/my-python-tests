@@ -25,7 +25,7 @@ class Alphabet:
         self.list_letters = list_letters    # атрибут класса
         print("Новый алфавит создан")
 
-russian = Alphabet("Русский", "RU", "абвгдеёжзийклмнопрстуфхцчшщъыьэюя") # экземпляр класса
+# russian = Alphabet("Русский", "RU", "абвгдеёжзийклмнопрстуфхцчшщъыьэюя") # экземпляр класса
 
 # Наш класс включает в себя метод __init__ c перечислением всех обязательных аргументов данного класса.
 # Обратите внимание, что перед названием и после него идет два нижних подчеркивания __.
@@ -73,15 +73,14 @@ russian = Alphabet("Русский", "RU", "абвгдеёжзийклмнопр
 
 class Animal():
     """Создаем животное"""
-
-    def __init__(self, name, age, height):
+    def __init__(self, name:str, age:int, height:int):
         """Инициализируем атрибуты животного"""
         self.name = name
         self.age = age
         self.height = height
-        self.weight = 100
+        self.weight = 10
 
-    def description_person(self):
+    def description_puppy(self):
         """Получение описания животного"""
         description = (self.name
                        + ", ему: " + str(self.age)
@@ -99,14 +98,42 @@ class Animal():
         print("Вес изменился на: " + str(kg) + " кг")
         print("Текущий вес: " + str(self.weight) + " кг")
 
+class Wolf(Animal):
+    """Создаем класс волка"""
+
+    def __init__(self, name:str, age:int, height:int):
+        """Инициализируем атрибуты класса родителя"""
+        super().__init__(name, age, height)
+        self.rage = 100
+
+    def get_rage(self):
+        """Получение заряда ярости"""
+        print("Заряд ярости волка равен: " + str(self.rage))
+
+    def description_puppy(self):
+        """Получение описания волка"""
+        description = (self.name
+                       + ", ему: " + str(self.age)
+                       + " лет, " + "заряд ярости: " + str(self.rage))
+        print("Нового волка зовут: " + description)
 
 
-dog = Animal("Max", 10, 52)
 
-dog.get_weight()
-dog.update_weight(10)   # поправился на 10 кг
-dog.update_weight(-5)   # похудел на 5 кг
-dog.get_weight()
+wild_wolf = Wolf("Дымок", 2, 45) # экземпляр класса потомка
+wild_wolf.description_puppy()                     # описание потомка
+wild_wolf.get_rage()                              # Заряд ярости волка равен
+wild_wolf.update_weight(30)                       # изменение веса у потомка
+
+
+
+
+# dog = Animal("Max", 10, 52)      # экземпляр класса предка
+# dog.description_puppy()                           # описание экземпляра класса предка
+# dog.get_weight()
+# dog.update_weight(10)   # поправился на 10 кг
+# dog.update_weight(-5)   # похудел на 5 кг
+# dog.get_weight()
+
 
 
 
