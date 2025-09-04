@@ -116,13 +116,15 @@ class Wolf(Animal):
                        + ", ему: " + str(self.age)
                        + " лет, " + "заряд ярости: " + str(self.rage))
         print("Нового волка зовут: " + description)
+        return description
 
 
 
 wild_wolf = Wolf("Дымок", 2, 45) # экземпляр класса потомка
 wild_wolf.description_puppy()                     # описание потомка
-wild_wolf.get_rage()                              # Заряд ярости волка равен
-wild_wolf.update_weight(30)                       # изменение веса у потомка
+# print("Нового волка зовут: " + wild_wolf.description_puppy())
+# wild_wolf.get_rage()                              # Заряд ярости волка равен
+# wild_wolf.update_weight(30)                       # изменение веса у потомка
 
 
 
